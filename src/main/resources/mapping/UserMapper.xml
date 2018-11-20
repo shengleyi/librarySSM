@@ -6,7 +6,7 @@
         <id column="id" property="id" jdbcType="BIGINT"></id>
         <result column="user_name" property="userName" jdbcType="VARCHAR"></result>
         <result column="user_pwd" property="userPwd" jdbcType="VARCHAR"></result>
-        <result column="user_email" property="user_email" jdbcType="VARCHAR"></result>
+        <result column="user_email" property="userEmail" jdbcType="VARCHAR"></result>
     </resultMap>
 
     <select id="selectUser" parameterType="com.leyi.library.entity.User" resultMap="userResultMap">

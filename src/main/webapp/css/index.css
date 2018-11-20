@@ -1,0 +1,71 @@
+body{
+    background: slategray;
+}
+
+.loginDiv{
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: cadetblue;
+    margin-top: 10%;
+}
+
+.registerDiv{
+    position: relative;
+    display: none;
+    width: 800px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: cadetblue;
+    margin-top: 10%;
+}
+
+.Label{
+    font-size: 35px;
+    padding-left: 20px;
+    display: block;
+}
+
+.Input{
+    margin-left: 20px;
+    width: 90%;
+    height: 10%;
+    border-radius: 20px;
+}
+
+.loginBtn{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.registerUiBtn{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.registerBtn{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+}

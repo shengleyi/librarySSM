@@ -13,8 +13,8 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     public boolean register(User user) {
-        User userinfo = userDao.selectUser(user.getUserName());
-        if(userinfo!=null){
+        User userInfo = userDao.selectUser(user.getUserName());
+        if(userInfo!=null){
             return false;
         }else{
             userDao.register(user);
@@ -22,8 +22,12 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public void login(User user) {
-
-        userDao.login(user);
+    public boolean login(User user) {
+        User userinfo = userDao.selectUser(user.getUserName());
+        if(userinfo != null){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -20,26 +20,36 @@ public class UserController {
     @ResponseBody
     public boolean login(HttpServletRequest request , HttpServletResponse response){
         String username = request.getParameter("username");
-        String userpwd = request.getParameter("userpwd");
+        String userpwd = request.getParameter("password");
 
-        return false;
+        User user = new User();
+        user.setUserName(username);
+        user.setUserPwd(userpwd);
+
+        if(userService.login(user)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @RequestMapping("/register")
     @ResponseBody
     public boolean register(HttpServletRequest request,HttpServletResponse response){
         String username = request.getParameter("username");
-        String userpwd = request.getParameter("userpwd");
-        String useremail = request.getParameter("useremail");
+        String userPwd = request.getParameter("password");
+        String userEmail = request.getParameter("email");
         User user = new User();
         user.setUserName(username);
-        user.setUserPwd(userpwd);
-        user.setUserEmail(useremail);
+        user.setUserPwd(userPwd);
+        user.setUserEmail(userEmail);
         if(userService.register(user)){
             return true;
+        }else{
+
+            return false;
         }
 
 
-        return false;
     }
 }

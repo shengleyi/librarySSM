@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Library Manage System</title>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body style="background: aquamarine">
-   <div style="background: aqua;position: absolute;width: 40%;left: 30%;height: 50%;top: 25%;">
-       <label style="font-size: 25px;">UserName:</label>
-       <input style="width: 80%;height: 25px;border-radius: 30px;">
-       <label style="font-size: 25px;">Password:</label>
-       <input style="width: 80%;height: 25px;border-radius: 30px;">
-       <button>LOGIN</button>
+<body>
+   <div id="login_div" class="loginDiv">
+       <label class="Label">UserName:</label>
+       <input id="username" class="Input">
+       <label class="Label">Password:</label>
+       <input type="text" id="password" class="Input">
+       <button type="submit" onclick="login_click()" class="loginBtn">LOGIN</button>
+       <button type="submit" onclick="ui_change()" class="registerUiBtn">register</button>
+   </div>
+
+   <div class="registerDiv" id="register_div">
+       <label class="Label">UserName:</label>
+       <input type="text" id="register_username" class="Input">
+       <label class="Label">User's email:</label>
+       <input type="text" id="register_email" class="Input">
+       <label class="Label">Password:</label>
+       <input type="text" id="register_password" class="Input">
+       <label class="Label">ConfirmPassword:</label>
+       <input type="text" id="confirm_password" class="Input">
+       <button type="submit" onclick="register_click()" class="registerBtn">REGISTER</button>
+       <button type="submit" onclick="ui_change()" class="registerUiBtn">login</button>
    </div>
 </body>
 </html>
